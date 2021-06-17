@@ -107,6 +107,11 @@ export default {
       this.nota = data;
 
       this.habilitarChecklist(this.nota.checklists.length > 0);
+    },
+    async recarregar(){
+      await this.carregar();
+
+      await this.recarregar.$fetchState.timestamp.Integer;
     }
   },
   async mounted() {

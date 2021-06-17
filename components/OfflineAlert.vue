@@ -3,9 +3,24 @@
 </template>
 
 <script>
+import NNotaVue from './NNota.vue';
 export default {
-  name: "offline-alert"
+  name: "offline-alert",
+ props: {
+    id: [NNotaVue]
+  },
+  data() {
+    return {
+      NNotaVue = NNotaVue
+    };
+  },
+  methods: {
+    recarregar() {
+        this.$fetch()
+      }
+    }
 };
+ 
 </script>
 
 <style></style>
